@@ -5,7 +5,7 @@
 *this is strictly designed to work in Active Desktop on Windows and may not conform to open standards, cross-browser compatibilty guidelines and may not run on windows versions later than 98.*
 
 ## Missing Contacts
-Originally, I had a number of personal contacts included in the source of these files; the files were generate by a FOXPRO for MSDOS script which I have since lost, as such, I stripped out the contacts. I'll probably be updating this so that it will run in webkit, and use Google API's to pull contact Data;
+Originally, I had a number of personal contacts included in the source of these files; the files were generate by a FOXPRO for MSDOS script which I have since lost. The contacts were personal contacts, as such, I stripped them out. It's possible I'll be updating this so that it will run in webkit, and use Google API's to pull contact Data. SEE ALSO: Maintenance
 
 ## Storage Format
 This is early work, prior to mature development with XML, and at the time, using XML added significant overhead, no-only due to limited browser support, but due to this being prior to the development of most major Javascript frameworks, so-far as I am aware.
