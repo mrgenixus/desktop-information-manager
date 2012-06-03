@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<STYLE TYPE="text/css">
+<!--
+@import "desktop.css";
+-->
+</STYLE>
+<script src="visibility.js">
+</script>
+<SCRIPT LANGUAGE= "JavaScript" src="clock.js">
+</SCRIPT>
+<script src="clock.js">
+</script>
+<script src="visibility.js">
+</script>
+<script src="hideall.js">
+</script>
+<script>
+function lookup(oterm, obaseurl){
+for (var i=0; i<obaseurl.length; i++){
+if (obaseurl.options[i].selected){
+theURL = obaseurl.options[i].value 
+theName = obaseurl.options[i].winname
+}
+}
+theURL += oterm.value
+dict = open(theURL,theName )
+
+}
+</script>
+</HEAD>
+<BODY onload="hideall();startclock()" bgcolor="black">
+<center>
+<br>
+<div onclick="toggle(document.all.phonedirectory)" class="mou" onmouseover="this.className='mov'" onmouseout="this.className='mou'" onmouseup="this.className='mov'" onmousedown="this.className='mdo'">Phone Directory</div>
+<div id="phonedirectory"><iframe id="addressbook" src="phone.htm" width = 100% height=80%></iframe></div>
+<div class="mou" onmouseup="this.className='mov'" onmousedown="this.className='mdo'" onmouseover="this.className='mov'" onmouseout="this.className='mou'" onclick="toggle(document.all.mydocuments)">My documents:</div>
+<div id="mydocuments"><IFRAME frameborder=0 NAME="mydocs" src="c:\ben\my documents" width="100%" ></IFRAME></div>
+<div onmouseup="this.className='mov'" onmousedown="this.className='mdo'" id="downloadstitle" class="mou" onmouseover="this.className='mov'" onmouseout="this.className='mou'" onclick="toggle(document.all.mydownloads)">my downloads</div>
+<div id="mydownloads"><IFRAME frameborder=0 width="100%" NAME="main" src="C:\ben\my downloads"></IFRAME></div>
+<div onmouseup="this.className='mov'" onmousedown="this.className='mdo'" class="mou" onmouseover="this.className='mov'" onmouseout="this.className='mou'"  onclick="toggle(document.all.folders)" >folders</div>
+<div style="visibility:visible" id="folders">
+  <a href="c:\ben\" onclick="" onmouseover="">Ben's stuff</a><br>
+  <a href="c:\ben\My Documents\WPDSI\mypage\">MY page</a><br>
+  <a href="c:\ben\My Documents\">MY documents</a><br>
+  <a href="c:\ben\my documents\theme tool kit\">theme tool kit</a><br>
+  <a href="\\unionc\students\11th\westb" target="westb">Westb</a><br>
+  <a href="">Ben</a><br>
+  <a href="my downloads">My Downloads</a><br>
+  <a href="my documents">My Documents</a><br>
+  <a href="c:\cavedog\totala">Totala</a><br>
+</div>
+<div onmouseup="this.className='mov'" onmousedown="this.className='mdo'" class="mou" onmouseover="this.className='mov'" onmouseout="this.className='mou'"  onclick="toggle(document.all.webpages)" >web pages</div>
+<div style="visibility:visible"id="webpages"><a href="My Documents\looktemplate\FrameSet1.html"  onclick="" onmouseover="">"look" template</a><br>
+  <a href="My Documents\WPDSI\mypage\FrameSet1.html">Ben's look</a>
+  <a href="phone.css">style sheet</a>
+</div>
+<div onmouseup="this.className='mov'" onmousedown="this.className='mdo'" class="mou" onmouseover="this.className='mov'"  onmouseout="this.className='mou'"  onclick="toggle(document.all.clock)" >clock</div>
+<div id="clock" class="clock">Not working</div>
+<div onmouseup="this.className='mov'" onmousedown="this.className='mdo'" class="mou" onmouseover="this.className='mov'" onmouseout="this.className='mou'"  onclick="toggle(document.all.calendar)">Calendar</div>
+<iframe id="calendar" frameborder=0 src="calendar.htm" width="375" height="375"></iframe>
+<div onmouseup="this.className='mov'" onmousedown="this.className='mdo'" class="mou" onmouseover="this.className='mov'" onmouseout="this.className='mou'"  onclick="toggle(document.all.todo)">To do</div>
+<iframe id="todo" width="100%" height="300" frameborder=0 src="c:\ben\todo.htm"></iframe>
+<div onmouseup="this.className='mov'" onmousedown="this.className='mdo'" class="mou" onmouseover="this.className='mov'" onmouseout="this.className='mou'"  onclick="toggle(document.all.dictionary)">Dictionary / thesaurus</div>
+<div id="dictionary">
+<form>
+<input type="Text" Id="term" >
+<select id="searchin">
+<option value="http://www.thesaurus.com/cgi-bin/search?config=roget&words=" winname="thes" >thesaurus</option>
+<option value="http://www.dictionary.com/cgi-bin/dict.pl?term=" winname="dict" >dictionary</option>
+</select>
+<input type="button" value="look it up" onclick="lookup(document.all.term, document.all.searchin)">
+</form>
+</div>
+<script>
+hide(document.all.phonedirectory)
+hide(document.all.mydocuments)
+hide(document.all.mydownloads)
+hide(document.all.webpages)
+hide(document.all.folders)
+hide(document.all.calendar)
+hide(document.all.clock)
+hide(document.all.todo)
+hide(document.all.dictionary)
+</script>
+</center>
+</BODY>
+</HTML>

@@ -1,0 +1,39 @@
+.mov     {color:ButtonText;
+             background-color:ButtonFace;
+             border-style:solid;
+             border-top-width:thin;
+             border-top-color:ButtonHighlight;
+             border-left-width:thin;
+             border-left-color:ButtonHighlight;
+             border-bottom-width:medium;
+             border-bottom-color:ButtonShadow;
+             border-right-width:medium;
+             border-right-color:ButtonShadow; 
+             text-align :  center;}
+.mou     {color:ButtonText;
+             background-color:ButtonFace;
+             border-style:solid;
+             border-color:ActiveBorder;
+             border-top-width:thin;
+             border-bottom-width:medium; 
+             text-align :  center;}
+.mdo     {color:ButtonText;
+             background-color:ButtonFace; 
+             border-style:solid; 
+             border-top-width:medium; 
+             border-top-color:ButtonShadow; 
+             border-left-width:medium; 
+             border-left-color:ButtonShadow; 
+             border-bottom-width:thin; 
+             border-bottom-color:buttonHighlight; 
+             border-right-width:thin; 
+             border-right-color:ButtonHighlight;  
+             text-align :  center;}
+.clock      {font-size:48pt; 
+             font-family:OCR A Extended; 
+             font-weight: normal; 
+             color: red }
+body        {background:Background;
+             color:WindowText}
+a           {color:HighlightText}
+

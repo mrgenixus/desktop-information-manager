@@ -1,0 +1,114 @@
+@media screen { .listCheck {visibility:hidden;display:none}
+	
+.special {
+	background : HighlightText;
+	border-color : Background;
+	color : HighlightText;
+	cursor : hand;
+	font : normal small-caps larger serif;
+	font : oblique;
+	text-align : left;
+	background-color : Background;
+	direction : rtl;
+	font-family : cursive;
+	letter-spacing : 5;
+	text-decoration : none;
+	text-transform : none;}
+
+.addbook {
+	border-bottom-color : ButtonShadow;
+	border-bottom-style : solid;
+	border-bottom-width : medium;
+	border-left : ButtonHighlight;
+	border-left-style : solid;
+	border-right : ButtonShadow;
+	border-right-style : solid;
+	border-top : ButtonHighlight;
+	border-top-style : solid;
+	border-width : thin;
+}
+.person {
+	border-bottom : ButtonHighlight;
+	border-bottom-style : solid;
+	border-bottom-width : medium;
+	border-left : ButtonShadow;
+	border-left-style : solid;
+	border-right : ButtonHighlight;
+	border-right-style : solid;
+	border-top : ButtonShadow;
+	border-top-style : solid;
+	border-width : thin;
+	text-decoration : underline;
+}
+
+.name {
+	color : Window;
+	cursor : hand;
+	font : monospace;
+	width : 48%;
+}
+
+.phonenumber{
+	color : WIndow;
+	width :30%;
+}
+
+.profesion {
+	display : none;
+	visibility : hidden;
+}
+
+.catagories {
+	display : none;
+	visibility : hidden;
+}
+
+.comments {
+	display : none;
+	visibility : hidden;
+}
+
+.interests {
+	display : none;
+	visibility : hidden;
+}
+
+U {
+	font : bold;
+	font : normal normal bold larger serif;
+	text-decoration : underline;
+	text-transform : capitalize;
+}
+
+.address {
+	display : none;
+	visibility : hidden;
+}
+
+.birthdate {
+	display : none;
+	visibility : hidden;
+}
+
+.e-mail {
+	display : none;
+	visibility : hidden;
+}
+
+body { background : Background; color : Window; font : serif; }
+
+.nameover {
+	color : Highlight;
+	cursor : hand;
+	font : monospace;
+	text-decoration : underline;
+	width : 48%;
+}
+
+A {
+	color : InfoBackground;
+}
+}
+@media Print{ 
+Body{ background:white; color:white; font:message-box;  }
+ }

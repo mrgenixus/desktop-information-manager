@@ -1,0 +1,40 @@
+
+<html>
+<head>
+<title>address book</title>
+<script src="visibility.js">
+</script>
+<script src="search.js">
+</script>
+<script src="popup.js">
+</script>
+<style> 
+@import "phone.css";
+</style> 
+</head>
+<body>
+<input class="special" type="text" id="string">
+<input class="special" type="checkbox" id ="MatchCase">
+<select multiple id="searchby" class="special">
+<option selected value="name">Name
+<option value="e-mail">E-mail Address
+<option value="phonenumber">Phone Number
+<option value="profesion">Profession
+<option value="catagories">Catagory
+<option value="comments">Comment
+<option value="interests">Interest
+<option value="address">Address
+<option value="birthdate">Birth Date
+</select>
+<input class="special" type="submit" value="search" onclick="search(document.all.string.value,document.all.MatchCase.Checked,document.all.searchby)">
+<input type="button" value="list options" onclick="toggle(document.all.listops, 'list-item')">
+<div id="listops" style="visibility:hidden;display:none">
+<input type="button" value="show/hide boxes" id ="boxtoggle" onclick="showboxes()">
+<input type="button" value="list" onclick="list()" id = "lister">
+<input type="button" value="clear checkmarks" onclick="clearlistcheck()">
+</div>
+<div class="addbook" id="addlist">
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2 Level 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE> calendar</TITLE>
+<BASE HREF="d:\ben\">
+
+<SCRIPT LANGUAGE="JavaScript">
+
+//show/hide script
+    function toggle(oStyle){
+      if (oStyle.visibility=='hidden'){
+        show(oStyle)
+        }
+      else{ 
+        hide(oStyle) 
+        }
+      }
+    function hide(oStyle2){
+      oStyle2.visibility="hidden"
+      oStyle2.display="none"
+      }
+    function show(oStyle1){
+      oStyle1.visibility="visible"
+      oStyle1.display="inline"
+      }
+//end show/hide script
+
+now=new Date()
+days = new Array('su', 'mo', 'tu', 'we', 'th', 'fr', 'sa')
+months = new Array('names','numdays')
+months.name = new Array('January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+feb = 28
+months.numdays = new Array(31,feb,31,30,31,30,31,31,30,31,30,31)   
+
+function clearCalendar(){
+  for(i=0;i<days.length;i++){
+    for(j=1;j<7;j++){
+      document.all[days[i]+j].innerHTML = ""
+      }
+    }
+  }
+function changemonth(number){
+  now.setMonth(now.getMonth()+number) 
+  setup()
+  }
+function changeDate(month, date, year){
+if (month != null){now.setMonth(month)}
+if (date !=null){now.setDate(date)}
+if (year != null){now.setYear(year)}
+}
+
+function setup(){
+  clearCalendar()
+  thismonthn = now.getMonth()
+  thisday = now.getDay()
+  thisdate = now.getDate()
+  thisyear = now.getYear()
+  first = new Date(thisyear, thismonthn, 1)
+  beginday = first.getDay()
+  thismonth = months.name[thismonthn]
+  document.all.month.innerText = thismonth
+  j = 1
+  daycount = beginday
+  for ( i = 1; i < months.numdays[thismonthn]+1;i++){
+    if(i == thisdate){
+      document.all[days[daycount] + j].align='center'  
+      document.all[days[daycount] + j].valign='center'  
+      document.all[days[daycount] + j].innerHTML = '<font size=+7><b>' + i+"</b></font>"
+      }
+    else{
+      //line 55
+      document.all[days[daycount] + j].innerText = i
+      }
+    if(daycount < 6){
+      daycount++
+      }
+    else{
+      daycount = 0
+      j++
+      }
+    }
+  if (now.getYear() < 100 ) {
+  document.all.year1.innerText = '19'+now.getYear()
+  document.all.year2.innerText = '19'+now.getYear()
+  }
+  else {
+  document.all.year1.innerText = now.getYear()
+  document.all.year2.innerText = now.getYear()
+  }
+  }
+
+</SCRIPT>
+</HEAD>
+<BODY bordercolor='black' BACKGROUND="D:\ben\My Documents\My Pictures\256 COLORS.bmp" TEXT="Black" LINK="Black" VLINK="Black" ALINK="Black" onclick="setup()" onload="setup()">
+<TABLE bgcolor="black" BORDER="1" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" HEIGHT="90%">
+<TR>
+<td id="year2" bgcolor="black" style="font-size:24pt;color:white">
+
+
+</td>
+       <TD bgcolor="black" id='month' colspan = 5 height="14%" align="center" style="font-size:24pt;color:white">
+
+       </TD>
+<td id="year1" bgcolor="black" style="font-size:24pt;color:white">
+
+
+</td>
+</TR>
+<TR>
+       <Th bgcolor="white" id="su0" height="10" width="14%">Sun</Th>
+       <Th bgcolor="white"id="mo0" height="10" width="14%">Mon</Th>
+       <Th bgcolor="white"id="tu0" height="10" width="14%">Tues</Th>
+       <Th bgcolor="white"id="we0" height="10" width="14%">Wed</Th>
+       <Th bgcolor="white"id="th0" height="10" width="14%">Thurs</Th>
+       <Th bgcolor="white"id="fr0" height="10" width="14%">Fri</Th>
+       <Th bgcolor="white"id="sa0" height="10" width="14">Sat</Th>
+</TR>
+<TR>
+<TD bgcolor="white"id="su1" height="14%" valign="top" ></TD>
+<TD bgcolor="white"id="mo1" valign="top" ></TD>
+<TD bgcolor="white"id="tu1" valign="top" ></TD>
+<TD bgcolor="white"id="we1" valign="top" ></TD>
+<TD bgcolor="white"id="th1" valign="top" ></TD>
+<TD bgcolor="white"id="fr1" valign="top" ></TD>
+<TD bgcolor="white"id="sa1" valign="top" ></TD>
+</TR>
+
+<TR>
+<TD bgcolor="white"id="su2" valign="top" height="14%"></TD>
+<TD bgcolor="white"id="mo2" valign="top"></TD>
+<TD bgcolor="white"id="tu2" valign="top"></TD>
+<TD bgcolor="white"id="we2" valign="top"></TD>
+<TD bgcolor="white"id="th2" valign="top"></TD>
+<TD bgcolor="white"id="fr2"valign="top" ></TD>
+<TD bgcolor="white"id="sa2"valign="top" ></TD>
+</TR>
+
+<TR>
+<TD bgcolor="white"id="su3" valign="top" height="14%"></TD>
+<TD bgcolor="white"id="mo3" valign="top"></TD>
+<TD bgcolor="white"id="tu3" valign="top"></TD>
+<TD bgcolor="white"id="we3"valign="top" ></TD>
+<TD bgcolor="white"id="th3"valign="top" ></TD>
+<TD bgcolor="white"id="fr3"valign="top" ></TD>
+<TD bgcolor="white"id="sa3"valign="top" ></TD>
+</TR>
+
+<TR>
+<TD bgcolor="white"id="su4" valign="top" height="14%"></TD>
+<TD bgcolor="white"id="mo4" valign="top"></TD>
+<TD bgcolor="white"id="tu4" valign="top"></TD>
+<TD bgcolor="white"id="we4" valign="top"></TD>
+<TD bgcolor="white"id="th4" valign="top"></TD>
+<TD bgcolor="white"id="fr4" valign="top"></TD>
+<TD bgcolor="white"id="sa4" valign="top"></TD>
+</TR>
+
+<TR>
+<TD bgcolor="white"id="su5" valign="top" height="14%"></TD>
+<TD bgcolor="white"id="mo5" valign="top"></TD>
+<TD bgcolor="white"id="tu5" valign="top"></TD>
+<TD bgcolor="white"id="we5" valign="top"></TD>
+<TD bgcolor="white"id="th5" valign="top"></TD>
+<TD bgcolor="white"id="fr5" valign="top"></TD>
+<TD bgcolor="white"id="sa5" valign="top"></TD>
+</TR>
+
+<TR>
+<TD bgcolor="white"id="su6" valign="top" height="14%"></TD>
+<TD bgcolor="white"id="mo6" valign="top"></TD>
+<TD bgcolor="white"id="tu6" valign="top"></TD>
+<TD bgcolor="white"id="we6" valign="top"></TD>
+<TD bgcolor="white"id="th6" valign="top"></TD>
+<TD bgcolor="white"id="fr6" valign="top"></TD>
+<TD bgcolor="white"id="sa6" valign="top"></TD>
+</TR>
+
+</TABLE>
+<button onclick="toggle(document.all.options.style)" >display options</button>
+
+<div id='options' style="visibility:hidden">
+<button onclick="changemonth(-1)"><--month</button>
+<button onclick="changemonth(+1)">month--></button><br>
+<select id="newmonth">
+<option>January
+<option>Febuary
+<option>March
+<option>April
+<option>May
+<option>June
+<option>July
+<option>August
+<option>September
+<option>October
+<option>November
+<option>December
+</select><br>
+<label style="background:white">new date<input type="text" id="newdate"></label><br>
+<label style="background:white">new year<input type="text" id="newyear"></label><br>
+<button onclick="changeDate(document.all.newmonth.selectedIndex,document.all.newdate.value,document.all.newyear.value)">change date</button>
+</div>
+</BODY>
+</HTML>
